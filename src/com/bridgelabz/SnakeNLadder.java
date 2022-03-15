@@ -38,8 +38,8 @@ class SnakeNLadder1 {
 		int diceValue = 0;
 		int DicePlayed1 = 0;
 		do {
-			System.out.println(currentPlayer == -1 ? "\n\nPlayer 1 Turn" : "\n\nPlayer 2 Turn");
-			System.out.println("Press R to roll Dice");
+			System.out.println(currentPlayer == -1 ? "\n\nFIRST PLAYER TURN" : "\n\nSECOND PLAYER TURN");
+			System.out.println("Press r to roll Dice");
 			str = s.next();
 			diceValue = rollDice();
 			if (currentPlayer == -1) {
