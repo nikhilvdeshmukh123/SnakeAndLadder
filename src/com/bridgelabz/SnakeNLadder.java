@@ -20,6 +20,7 @@ class SnakeNLadder1 {
 		Random r = new Random();
 		n = r.nextInt(7);
 		return (n == 0 ? 1 : n);
+
 	}
 
 	public String snake() {
@@ -36,7 +37,7 @@ class SnakeNLadder1 {
 		Scanner s = new Scanner(System.in);
 		String str;
 		int diceValue = 0;
-		int DicePlayed1 = 0;
+		int count = 0;
 		do {
 			System.out.println(currentPlayer == -1 ? "\n\nFIRST PLAYER TURN" : "\n\nSECOND PLAYER TURN");
 			System.out.println("Press r to roll Dice");
@@ -46,7 +47,8 @@ class SnakeNLadder1 {
 				player1 = calculatePlayerValue(player1, diceValue);
 				System.out.println("First Player :: " + player1);
 				System.out.println("------------------");
-
+				count++;
+				System.out.println("No of Dice Played :" + count);
 				if (isWin(player1)) {
 					System.out.println("First player wins");
 
