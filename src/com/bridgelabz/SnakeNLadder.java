@@ -32,7 +32,7 @@ class SnakeNLadder1 {
 	}
 
 	public void startGame() {
-		int player1 = 0;
+		int player1 = 0, player2 = 0;
 		int currentPlayer = -1;
 		Scanner s = new Scanner(System.in);
 		String str;
@@ -46,6 +46,7 @@ class SnakeNLadder1 {
 			if (currentPlayer == -1) {
 				player1 = calculatePlayerValue(player1, diceValue);
 				System.out.println("First Player :: " + player1);
+				System.out.println("Second Player :: " + player2);
 				System.out.println("------------------");
 				count++;
 				System.out.println("No of Dice Played :" + count);
@@ -54,7 +55,19 @@ class SnakeNLadder1 {
 
 					return;
 				}
+			} else {
+				player2 = calculatePlayerValue(player2, diceValue);
+				System.out.println("First Player :: " + player1);
+				System.out.println("Second Player :: " + player2);
+				System.out.println("------------------");
+				count++;
+				System.out.println("No of Dice Played :" + count);
+				if (isWin(player2)) {
+					System.out.println("Second player wins");
+					return;
+				}
 			}
+
 			currentPlayer = -currentPlayer;
 		} while ("r".equals(str));
 	}
